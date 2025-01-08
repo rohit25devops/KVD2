@@ -5,15 +5,11 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- main
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: |
-      javac jj.java
-      
-      java jj
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
